@@ -12,15 +12,13 @@
         <label for="publishedBefore">Published Before</label>
         <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>" >    
     </div>
-    <button type="submit">Search</button>
+    <button class="btn btn-primary" type="submit">Search</button>
 </form>
 <br>
 <div>
     <% books.forEach(book => { %>
-        <!-- <label for=""><%= book.title %></label> -->
         <a href="/books/<%= book.id %>">
         <img height="150" width="100" src="<%= book.coverImagePath %>" alt="">
     </a>
     <% }) %>
 </div>
-
